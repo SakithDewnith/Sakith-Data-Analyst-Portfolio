@@ -1,4 +1,12 @@
-# Sakith Fernando - Data Analyst Portfolio
+# Sakith Fernando - Data Analyst / Data Science Portfolio
+
+## Table of Contents
+
+* [1. Customer Churn Risk & Revenue Exposure Analytics](#1-customer-churn-risk--revenue-exposure-analytics)
+* [2. Chest X-Ray Pneumonia Detection using Deep Learning](#2-chest-x-ray-pneumonia-detection-using-deep-learning)
+
+
+---
 
 ## 1. Customer Churn Risk & Revenue Exposure Analytics
 
@@ -87,3 +95,6 @@ SQL | Python | Pandas | NumPy | PostgreSQL | Streamlit | Plotly
   </tr>
 </table>
 </div>
+
+
+## 2. Chest X-Ray Pneumonia Detection using Deep Learning
