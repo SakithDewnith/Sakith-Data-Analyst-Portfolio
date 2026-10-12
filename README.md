@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-* [1. Customer Churn Risk & Revenue Exposure Analytics](#1-customer-churn-risk--revenue-exposure-analytics)
+* [1. Customer Churn & Revenue Exposure Analytics](#1-customer-churn--revenue-exposure-analytics)
 * [2. Chest X-Ray Pneumonia Detection using Deep Learning](#2-chest-x-ray-pneumonia-detection-using-deep-learning)
-
+* [3. Employee Salary Prediction & Analysis](#3-employee-salary-prediction--analysis)
 
 ---
 
@@ -192,6 +192,97 @@ Key findings from model evaluation:
       </td>
     </tr>
   </table>
+<br>
+
+---
+
+## 3. Employee Salary Prediction & Analysis
+
+**📋 README:** [View Documentation](https://github.com/SakithDewnith/CS_Group_09_Salary_prediction/blob/main/README)
+
+**📓 My Model – Linear Regression::** [View Notebook](https://github.com/SakithDewnith/CS_Group_09_Salary_prediction/blob/main/notebooks/Sakith_FC110558/Linear_regression.ipynb)
+
+<br>
+
+**Goal:** 
+
+Analyze employee salary trends, explore factors associated with salary differences, and develop and evaluate machine learning models for salary prediction.
+<br>
+
+**Workflow:**
+<p align="center">
+  <img
+    width="624" height="100"
+    alt="Employee Salary Prediction Project Workflow"
+    src="https://github.com/user-attachments/assets/daec31e5-26db-4c20-9b4f-c37dd5df3880"
+  />
+</p>
+
+<br>
+
+**Description:**
+
+This group project analyzes employee salary data to explore salary patterns across age, gender, education level, job title, and years of experience. The project involves data cleaning, exploratory data analysis, machine learning model development, performance evaluation, and dashboard visualization. Multiple regression algorithms were evaluated to compare their salary prediction performance. **My contributions included developing and evaluating a Linear Regression model, identifying potential data inconsistencies, and recommending a systematic data-cleaning process to help the team identify and address data-quality issues consistently**. The findings and visualizations provide insights into salary patterns and model performance.  
+
+<br>
+
+**Technical Methods:**
+
+| Technique                       | Purpose                                                                                                     |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Data Cleaning                   | Removed missing values and duplicate records, standardized education labels, and filtered low salary values |
+| Exploratory Data Analysis (EDA) | Analyzed salary distributions and relationships with age, experience, education, gender, and job title      |
+| Feature Preprocessing           | Applied one-hot encoding to categorical variables and standard scaling to numerical features                |
+| Rare Category Grouping          | Grouped infrequent job titles and education categories into an "Other" category                             |
+| Linear Regression Pipeline      | Integrated preprocessing and Linear Regression into a single scikit-learn pipeline                          |
+| Cross-Validation                | Applied five-fold cross-validation to assess model performance across different data splits                 |
+| Model Evaluation                | Evaluated predictions using R², RMSE, actual-versus-predicted plots, and residual analysis                  |
+
+<br>
+
+**Skills:**
+
+Data Cleaning | Data Quality Assessment | Exploratory Data Analysis (EDA) | Salary Trend Analysis | Data Visualization | Feature Preprocessing | Linear Regression | Model Evaluation | Cross-Validation
+
+<br>
+
+**Technology:**
+
+Python | Pandas | NumPy | Matplotlib | Seaborn | scikit-learn | Joblib| Streamlit
+
+<br>
+
+**Results & Key Findings:**
+
+**My Model — Linear Regression**
+
+* **Model Performance:** Achieved a test R² score of **0.806** and a five-fold cross-validation mean R² of **0.819**.
+* **Prediction Error:** Recorded an RMSE of approximately **22,598** on the test set.
+* **Model Evaluation:** Used actual-versus-predicted plots and residual analysis to examine prediction accuracy and errors.
+* **Salary Analysis:** Explored salary distributions and relationships with age, years of experience, education level, gender, and job title.
+
+**Overall Group Project**
+
+* **Data Cleaning:** Reduced the dataset from **6,704 to 1,782 records** after removing missing values, duplicate rows, and low salary values.
+* **Model Comparison:** Random Forest achieved the highest reported test R² score of **0.98** and the lowest RMSE of **6,849** among the evaluated models.
+* **Key Conclusion:** Tree-based models, particularly Random Forest, showed stronger reported predictive performance than Linear Regression in the model comparison.
+
+<br>
+
+**Future Improvements:**
+
+* **Feature Engineering:** Explore additional features and transformations to improve Linear Regression performance.
+* **Ensemble Methods:** Combine Random Forest with other well-performing models to investigate potential performance improvements.
+* **Hyperparameter Tuning:** Optimize parameters for models with lower predictive performance.
+* **More Training Data:** Collect additional reliable training data to improve model stability and generalization.
+* **Alternative Algorithms:** Experiment with algorithms such as LightGBM and CatBoost.
+<br>
+
+**Model Deployment Recommendations**
+
+* **Model Selection:** Consider Random Forest for deployment after validating its performance.
+* **Model Monitoring:** Monitor prediction accuracy and retrain the model as new data becomes available.
+
 <br>
 
 ---
