@@ -263,7 +263,7 @@ Python | Pandas | NumPy | Matplotlib | Seaborn | scikit-learn | Joblib| Streamli
 
 **Overall Group Project**
 
-* **Data Cleaning:** Reduced the dataset from **6,704 to 1,782 records** after removing missing values, duplicate rows, and low salary values.
+* **Data Cleaning:** Reduced the dataset from **6,704 to 1,782 records** after removing missing values, duplicate rows, standardizing education-level labels, and filtering salary values below 1,000.
 * **Model Comparison:** Random Forest achieved the highest reported test R² score of **0.98** and the lowest RMSE of **6,849** among the evaluated models.
 * **Key Conclusion:** Tree-based models, particularly Random Forest, showed stronger reported predictive performance than Linear Regression in the model comparison.
 
