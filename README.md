@@ -4,7 +4,7 @@
 
 * [1. Customer Churn & Revenue Exposure Analytics](#1-customer-churn--revenue-exposure-analytics)
 * [2. Chest X-Ray Pneumonia Detection using Deep Learning](#2-chest-x-ray-pneumonia-detection-using-deep-learning)
-* [3. Employee Salary Prediction & Analysis](#3-employee-salary-prediction--analysis)
+* [3. Employee Salary Analysis & Prediction ](#3-employee-salary-analysis--prediction)
 
 ---
 
@@ -196,7 +196,7 @@ Key findings from model evaluation:
 
 ---
 
-## 3. Employee Salary Prediction & Analysis
+## 3. Employee Salary Analysis & Prediction 
 
 **📋 README:** [View Documentation](https://github.com/SakithDewnith/CS_Group_09_Salary_prediction/blob/main/README)
 
