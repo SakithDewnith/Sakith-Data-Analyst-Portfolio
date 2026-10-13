@@ -198,7 +198,7 @@ Key findings from model evaluation:
 
 ## 3. Employee Salary Analysis & Prediction 
 
-**📋 README:** [View Documentation](https://github.com/SakithDewnith/CS_Group_09_Salary_prediction/blob/main/README)
+**📋 README:** [View Documentation](https://github.com/SakithDewnith/CS_Group_09_Salary_prediction/blob/main/README.md)
 
 **📓 My Model – Linear Regression::** [View Notebook](https://github.com/SakithDewnith/CS_Group_09_Salary_prediction/blob/main/notebooks/Sakith_FC110558/Linear_regression.ipynb)
 
