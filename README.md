@@ -4,7 +4,8 @@
 
 * [1. Customer Churn & Revenue Exposure Analytics](#1-customer-churn--revenue-exposure-analytics)
 * [2. Chest X-Ray Pneumonia Detection using Deep Learning](#2-chest-x-ray-pneumonia-detection-using-deep-learning)
-* [3. Employee Salary Analysis & Prediction ](#3-employee-salary-analysis--prediction)
+* [3. Inventory Performance & Replenishment Planning (Excel)](#3-inventory-performance--replenishment-planning-excel)
+* [4. Employee Salary Analysis & Prediction ](#4-employee-salary-analysis--prediction)
 
 ---
 
@@ -196,7 +197,65 @@ Key findings from model evaluation:
 
 ---
 
-## 3. Employee Salary Analysis & Prediction 
+## 3. Inventory Performance & Replenishment Planning (Excel)
+
+**📋 README:** [View Documentation](https://github.com/SakithDewnith/inventory-coverage-replenishment-analysis/edit/main/README.md)
+
+**📓 Excel Workbook:** [Download Excel Workbook](https://github.com/SakithDewnith/inventory-coverage-replenishment-analysis/blob/main/Inventory_Coverage_Replenishment_Analysis.xlsx)
+
+<br>
+
+**Goal:** 
+
+Identify customer segments with elevated churn, estimate their potential monthly revenue exposure, and prioritize retention opportunities based on potential business impact.
+
+**Analytical Workflow:**
+<p align="center">
+<img width="624" height="100" alt="Create_workflow_diagram_for_analysis" src="https://github.com/user-attachments/assets/4f6dbc6c-36c9-4795-8a46-e55e23a06726" />
+</p>
+
+<br>
+
+**Description:**
+
+This project analyzed **7,043 telecom customer records** to identify where customer churn and potential monthly revenue exposure are concentrated. Using **SQL (PostgreSQL)** and **Python (Pandas)**, I cleaned and validated the data, screened 17 customer attributes to select **Contract Type, Internet Service, and Payment Behaviour** for deeper analysis, and prioritized one customer segment within each factor. I then analyzed subgroups with elevated churn and ranked qualifying groups by estimated monthly revenue exposure to highlight potential retention opportunities. An interactive **Power BI dashboard** enables users to compare priority segments, explore churn patterns, and investigate the customer subgroups contributing to revenue exposure.
+
+<br>
+
+**Skills:**
+
+- **SQL (PostgreSQL):** Data Exploration (EDA), Data Cleaning, Data Validation, Aggregation, Conditional Aggregation (FILTER), GROUP BY Analysis, Calculated Metrics
+
+- **Python:** Pandas, Matplotlib, SciPy, scikit-learn, Cramér's V, Logistic Regression, Permutation Feature Importance, Customer Segmentation, Factor Screening, Churn Analysis, Revenue Exposure Estimation, Driver Analysis, Data Visualization
+
+- **Power BI:** DAX Measures, Data Modeling, Interactive Filtering, KPI Cards, Data Visualization, Interactive Dashboards
+
+<br>
+
+**Results & Key Findings:**
+
+- **Overall Churn:** Analyzed 7,043 customers and found a 26.54% historical churn rate, with approximately $139.1K in monthly charges associated with churned customers.
+
+- **Priority Segments:** Screened 17 customer attributes and selected three areas for deeper analysis: Month-to-month contracts (42.71% churn; $58.3K estimated monthly exposure), Fiber optic internet (41.89%; $70.8K), and Electronic check payments (45.29%; $43.5K).
+
+- **Key Driver Findings:** Identified the highest-exposure subgroups within each segment: customers without Tech Support for Month-to-month ($46.9K/month), customers using paperless billing within Fiber optic ($55.9K/month), and Fiber optic users paying by Electronic check ($36.6K/month). Customers without Online Security also appeared among the top three subgroups in all three segments.
+
+- **Business Dashboard:** Developed an interactive Power BI dashboard to compare churn rates, explore priority segments, and investigate customer subgroups with elevated churn and estimated monthly revenue exposure.
+
+**Business Recommendations:**
+
+- Test longer-term contract incentives for Month-to-month customers, particularly those using Fiber optic internet.
+- Test targeted Tech Support and Online Security offers to assess whether service adoption improves customer retention.
+- Investigate Fiber optic customers paying by Electronic check, as this subgroup has the highest estimated monthly revenue exposure within the Electronic check segment.
+- Measure results against a comparable control group and expand successful initiatives only when the retained revenue justifies the cost.
+
+These are proposed actions based on observed churn patterns; their effectiveness has not yet been tested.
+
+<br>
+
+---
+
+## 4. Employee Salary Analysis & Prediction 
 
 **📋 README:** [View Documentation](https://github.com/SakithDewnith/CS_Group_09_Salary_prediction/blob/main/README.md)
 
