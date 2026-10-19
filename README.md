@@ -199,7 +199,7 @@ Key findings from model evaluation:
 
 ## 3. Inventory Performance & Replenishment Planning (Excel)
 
-**📋 README:** [View Documentation](https://github.com/SakithDewnith/inventory-coverage-replenishment-analysis/edit/main/README.md)
+**📋 README:** [View Documentation](https://github.com/SakithDewnith/inventory-coverage-replenishment-analysis/blob/main/README.md)
 
 **📓 Excel Workbook:** [Download Excel Workbook](https://github.com/SakithDewnith/inventory-coverage-replenishment-analysis/blob/main/Inventory_Coverage_Replenishment_Analysis.xlsx)
 
@@ -211,7 +211,7 @@ Identify customer segments with elevated churn, estimate their potential monthly
 
 **Analytical Workflow:**
 <p align="center">
-<img width="624" height="100" alt="Create_workflow_diagram_for_analysis" src="https://github.com/user-attachments/assets/4f6dbc6c-36c9-4795-8a46-e55e23a06726" />
+<img width="754" height="120" alt="Inventory_coverage_project_workf…_20261018213426" src="https://github.com/user-attachments/assets/41e1ca32-ea04-43af-aeda-56411ff5db14" />
 </p>
 
 <br>
