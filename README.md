@@ -207,7 +207,9 @@ Key findings from model evaluation:
 
 **Goal:** 
 
-Identify customer segments with elevated churn, estimate their potential monthly revenue exposure, and prioritize retention opportunities based on potential business impact.
+Determine whether inventory levels are appropriate for changing demand, identify SKU–warehouse records with potential replenishment risk or high stock coverage, and prioritize them for review based on risk and inventory value.
+
+<br>
 
 **Analytical Workflow:**
 <p align="center">
@@ -218,38 +220,53 @@ Identify customer segments with elevated churn, estimate their potential monthly
 
 **Description:**
 
-This project analyzed **7,043 telecom customer records** to identify where customer churn and potential monthly revenue exposure are concentrated. Using **SQL (PostgreSQL)** and **Python (Pandas)**, I cleaned and validated the data, screened 17 customer attributes to select **Contract Type, Internet Service, and Payment Behaviour** for deeper analysis, and prioritized one customer segment within each factor. I then analyzed subgroups with elevated churn and ranked qualifying groups by estimated monthly revenue exposure to highlight potential retention opportunities. An interactive **Power BI dashboard** enables users to compare priority segments, explore churn patterns, and investigate the customer subgroups contributing to revenue exposure.
+This project analyzed **91,250 daily inventory records** across 50 SKUs, 5 warehouses and 10 suppliers to understand how stock coverage changes with seasonal demand and where replenishment attention may be needed. Using **Excel (Power Query, PivotTables and formulas)**, I cleaned and validated the data, compared demand with forecasts, measured days of coverage by month and by record, and applied two replenishment checks to the latest snapshot (30 December 2024): stock at or below the reorder point, and stock below forecast demand during supplier lead time. I combined flagged records with high-coverage records into a prioritized review list that included inventory value. The dataset is synthetic, so the findings demonstrate an analytical approach rather than results from a real company.
 
 <br>
 
 **Skills:**
 
-- **SQL (PostgreSQL):** Data Exploration (EDA), Data Cleaning, Data Validation, Aggregation, Conditional Aggregation (FILTER), GROUP BY Analysis, Calculated Metrics
+- **Excel**: Power Query, Excel Tables, PivotTables, PivotCharts, Formulas, Filtering and Sorting, Charts
 
-- **Python:** Pandas, Matplotlib, SciPy, scikit-learn, Cramér's V, Logistic Regression, Permutation Feature Importance, Customer Segmentation, Factor Screening, Churn Analysis, Revenue Exposure Estimation, Driver Analysis, Data Visualization
+- **Data Preparation**: Data Cleaning, Validation Checks, Data Quality Log
 
-- **Power BI:** DAX Measures, Data Modeling, Interactive Filtering, KPI Cards, Data Visualization, Interactive Dashboards
+- **Inventory Analysis**: Stock Coverage, Reorder Points, Supplier Lead-Time Analysis, Inventory Valuation
+
+- **Demand Analysis**: Seasonality, Forecast Accuracy (MAE and Bias)
+
+- **Business Analysis**: Problem Framing, Prioritization, Recommendations
 
 <br>
 
 **Results & Key Findings:**
 
-- **Overall Churn:** Analyzed 7,043 customers and found a 26.54% historical churn rate, with approximately $139.1K in monthly charges associated with churned customers.
+- **Seasonal Demand**: Units sold ranged from 76,304 in September to 231,596 in March, while average stock per record stayed within a relatively narrow range of approximately 454–528 units.
 
-- **Priority Segments:** Screened 17 customer attributes and selected three areas for deeper analysis: Month-to-month contracts (42.71% churn; $58.3K estimated monthly exposure), Fiber optic internet (41.89%; $70.8K), and Electronic check payments (45.29%; $43.5K).
+- **Stock Coverage**: Monthly coverage ranged from 15.2 days in April to 46.1 days in October, highlighting changes in the relationship between inventory and demand across the year.
 
-- **Key Driver Findings:** Identified the highest-exposure subgroups within each segment: customers without Tech Support for Month-to-month ($46.9K/month), customers using paperless billing within Fiber optic ($55.9K/month), and Fiber optic users paying by Electronic check ($36.6K/month). Customers without Online Security also appeared among the top three subgroups in all three segments.
+- **Replenishment Flags**: On 30 December 2024, 18 unique SKU–warehouse records were flagged for review: 14 at or below their reorder points and 5 with potential lead-time shortfalls, with 1 record appearing in both groups. Together, they held approximately $60.4K, or 4.3% of the $1.40M inventory value.
 
-- **Business Dashboard:** Developed an interactive Power BI dashboard to compare churn rates, explore priority segments, and investigate customer subgroups with elevated churn and estimated monthly revenue exposure.
+- **Reorder-Point Gap**: Four of the five potential-shortfall records were above their reorder points, and all five had supplier lead times of 13–14 days. This shows why reorder-point checks alone may not identify every potential replenishment concern.
+
+- **Record-Level Differences**: Average coverage by warehouse was similar (24.4–27.5 days), but individual SKU–warehouse records ranged from 9.2 to 165.4 days. The 10 highest-coverage records held approximately $73.8K in inventory. SKU_41, for example, had 19.6 days of coverage in WH_1 compared with 165.4 days in WH_5.
+
+- **Forecast Analysis**: Full-year forecast demand was approximately 1.832 million units compared with 1.830 million units sold, with an MAE of 2.38 units per record. Although aggregate forecast demand was close to actual sales, further analysis at SKU, warehouse and monthly levels would be needed to assess forecast accuracy in detail.
+
+- **Review List**: Created a prioritized review list combining replenishment flags, high-coverage records and inventory value, supported by charts of demand and coverage, record-level coverage, and inventory value by warehouse.
 
 **Business Recommendations:**
 
-- Test longer-term contract incentives for Month-to-month customers, particularly those using Fiber optic internet.
-- Test targeted Tech Support and Online Security offers to assess whether service adoption improves customer retention.
-- Investigate Fiber optic customers paying by Electronic check, as this subgroup has the highest estimated monthly revenue exposure within the Electronic check segment.
-- Measure results against a comparable control group and expand successful initiatives only when the retained revenue justifies the cost.
+- Review potential shortfalls first: Prioritize the 5 potential-shortfall records (approximately 319 units flagged) and the 13 additional records at or below their reorder points (approximately 133 units flagged). Check open purchase orders, incoming deliveries and expected demand before placing orders.
 
-These are proposed actions based on observed churn patterns; their effectiveness has not yet been tested.
+- Review replenishment settings: Evaluate reorder points for items with 13–14 day supplier lead times, taking demand variability and seasonal patterns into account before making adjustments.
+
+- Investigate high-coverage inventory: Review the 10 highest-coverage records against upcoming demand and planned orders before delaying or reducing purchases.
+
+- Assess transfer opportunities: Investigate whether transferring some SKU_41 inventory from WH_5 to WH_1 is practical after checking local demand, transfer costs and timing.
+
+- Monitor regularly: Repeat the coverage and replenishment checks using updated inventory, demand and purchase-order data before implementing wider changes.
+
+- These are proposed actions based on screening indicators from a synthetic dataset. Quantities are estimates from the 30 December 2024 snapshot and forecast. Potential shortfalls are not confirmed stockouts, high coverage does not by itself establish excess stock, and the proposed actions have not been tested.
 
 <br>
 
